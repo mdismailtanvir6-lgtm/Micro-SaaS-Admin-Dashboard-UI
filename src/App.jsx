@@ -1,15 +1,21 @@
-import './index.css'
+import "./index.css";
+import Button from "./components/ui/Button";
+import { ThemeProvider } from "./theme/ThemeContext";
+import ThemeToggle from "./theme/ThemeToggle";
 
 function App() {
-
-
   return (
     <>
-     <div>
-      <p className='text-center'>Hello world</p>
-     </div>
+      <ThemeProvider>
+          <ThemeToggle>theme</ThemeToggle>
+        <section className="h-screen flex items-center justify-center">
+          <Button variant="danger" disabled={false}>
+            Click Now
+          </Button>
+        </section>
+      </ThemeProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
