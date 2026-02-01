@@ -1,2 +1,45 @@
+/* ======= importing poppins and inter font ========= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ==== importing tailwind css and dark mode css === */
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* ========= custom css ======= */
+
+/* ========= custom theme ======= */
+@theme {
+  /* ====== color ========== */
+  --color-white_color: #ffffff;
+  --color-black_color: #000000;
+  --color-primary_color: #363738;
+  --color-secondary_color: #F5F5F5;
+  --color-secondary_color1: #DB4444;
+  --color-text_color: #FAFAFA;
+  --color-text1_color: #7D8184;
+  --color-button1_color: #00FF66;
+  --color-button_color: #DB4444;
+  --color-hoverButton_color1: #E07575;
+  --color-hoverButton_color2: #A0BCE0;
+
+  /* ========= font ============ */
+  --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+}
+
+/* ========= modal animation ====== */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.15s ease-out;
+}
